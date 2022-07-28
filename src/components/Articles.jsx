@@ -15,7 +15,7 @@ export default function Articles() {
         <TopicsList />
       </div>
       <div className={classes.contAtrLst}>
-        <ArticleList />
+        <ArticleList topic={topic} />
       </div>
     </section>
   );

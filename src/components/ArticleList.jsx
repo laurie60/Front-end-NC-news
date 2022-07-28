@@ -1,24 +1,27 @@
 import { useEffect, useState } from "react";
 import ArticleCard from "./ArticleCard";
 import classes from "./ArticleCard.module.css";
-import { useParams } from "react-router-dom";
 
-export default function ArticleList() {
+export default function ArticleList(props) {
   const [listArticles, setListArticles] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const { topic } = useParams();
+
   useEffect(() => {
     setIsLoading(true);
-    if (topic)
-      fetch("https://laurences-news.herokuapp.com/api/articles")
-        .then((res) => {
-          return res.json();
-        })
-        .then((body) => {
-          setListArticles(body.articles);
-          setIsLoading(false);
-        });
-  }, []);
+    fetch(
+      props.topic
+        ? `https://laurences-news.herokuapp.com/api/articles?topic=${props.topic}`
+        : "https://laurences-news.herokuapp.com/api/articles"
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((body) => {
+        console.log(body.articles);
+        setListArticles(body.articles);
+        setIsLoading(false);
+      });
+  }, [props.topic]);
   return isLoading ? (
     <p>Loading</p>
   ) : (
