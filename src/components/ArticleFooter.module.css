@@ -1,0 +1,18 @@
+.addByTxt {
+  align-self: center;
+  font-size: 0.8rem;
+  background-color: rgba(255, 251, 0, 0.534);
+  width: 15%;
+  border-radius: 10%;
+  border: 2px whitesmoke;
+  border-style: dashed;
+}
+
+.voteCount {
+  font-size: 0.8rem;
+  grid-area: votes;
+}
+
+.date {
+  grid-area: dateAdded;
+}

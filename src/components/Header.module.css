@@ -1,0 +1,24 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.mainHeader {
+  background-color: rgba(246, 244, 16, 255);
+  overflow: hidden;
+  width: fit-content;
+}
+
+.container {
+  width: 100vw;
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.mainHeader .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
