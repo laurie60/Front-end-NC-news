@@ -1,0 +1,60 @@
+.title {
+  font-size: 1.3rem;
+  padding: 3px;
+  /* border: 2px rgb(183, 102, 102); */
+  /* border-style: dotted;
+  border-radius: 1%; */
+  background-color: rgba(255, 255, 255, 0.534);
+  align-self: center;
+
+  grid-area: title;
+}
+
+.addByTxt {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.796);
+  background-color: rgba(255, 251, 0, 0.534);
+  grid-area: addedBy;
+  align-self: center;
+  width: 60px;
+  line-height: 60px;
+  border-radius: 70%;
+  text-align: center;
+  justify-self: center;
+}
+
+.topicTxt {
+  margin: 10px;
+  grid-area: topic;
+  align-self: center;
+  justify-self: center;
+  font-size: 1.2rem;
+}
+
+#coding {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+}
+
+#football {
+  font-size: 1.2rem;
+  background-size: 0.1rem;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-color: rgb(0, 0, 255);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.3) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.3) 75%,
+    transparent 75%,
+    transparent
+  );
+}
+
+#cooking {
+  animation: smoky 5s;
+  color: #df0606;
+}
