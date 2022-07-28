@@ -1,0 +1,42 @@
+.voteCount {
+  font-size: 0.8rem;
+  height: 100%;
+  width: 100%;
+  grid-area: votes;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.117);
+}
+.wrapper {
+  width: 90%;
+  padding: 3px;
+}
+
+.voteArrows {
+  height: 25px;
+  padding: 8px;
+  text-align: center;
+  font-size: 20px;
+  border-width: 1px;
+  border-radius: 50%;
+  background-color: rgba(163, 163, 163, 0.345);
+  border: dashed rgba(163, 163, 163, 0.345);
+}
+
+.voteTxt {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+#upArrow {
+  background-color: rgba(13, 255, 0, 0.353);
+  border: dashed rgba(13, 255, 0, 0.353);
+}
+
+#downArrow {
+  background-color: rgba(255, 0, 0, 0.345);
+  border: dashed rgba(255, 0, 0, 0.345);
+}

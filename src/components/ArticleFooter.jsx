@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import classes from "./ArticleFooter.module.css";
+import Votes from "./Votes";
 
 export default function ArticleFooter(props) {
   function strDate(date) {
@@ -8,7 +9,8 @@ export default function ArticleFooter(props) {
   }
   return (
     <Fragment>
-      <p className={classes.voteCount}>Votes: {props.votes} </p>
+      <Votes votes={props.votes} id={props.id} />
+
       <p className={classes.date}>Date Posted: {strDate(props.datePosted)}</p>
     </Fragment>
   );

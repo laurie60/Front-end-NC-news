@@ -19,6 +19,7 @@ export default function SingleArticleCard(props) {
           createdAt={props.createdAt}
           votes={props.votes}
           commentCount={props.commentCount}
+          id={props.id}
         />
       </div>
     </div>

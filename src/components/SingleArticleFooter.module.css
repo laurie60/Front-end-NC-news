@@ -8,11 +8,6 @@
   border-style: dashed;
 }
 
-.voteCount {
-  font-size: 0.8rem;
-  grid-area: votes;
-}
-
 .date {
   grid-area: dateAdded;
 }

@@ -37,6 +37,7 @@ export default function SingleArticle() {
         createdAt={article.created_at}
         votes={article.votes}
         commentCount={article.commentCount}
+        id={article.article_id}
       />
     </section>
   );

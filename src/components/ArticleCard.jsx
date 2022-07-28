@@ -25,6 +25,7 @@ export default function ArticleCard(props) {
               <ArticleFooter
                 datePosted={article.created_at}
                 votes={article.votes}
+                id={article.article_id}
               />
             </div>
           </div>
