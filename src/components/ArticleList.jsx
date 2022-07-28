@@ -2,20 +2,26 @@ import { useEffect, useState } from "react";
 import ArticleCard from "./ArticleCard";
 import classes from "./ArticleCard.module.css";
 
-export default function ArticleList() {
+export default function ArticleList(props) {
   const [listArticles, setListArticles] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://laurences-news.herokuapp.com/api/articles")
+    fetch(
+      props.topic
+        ? `https://laurences-news.herokuapp.com/api/articles?topic=${props.topic}`
+        : "https://laurences-news.herokuapp.com/api/articles"
+    )
       .then((res) => {
         return res.json();
       })
       .then((body) => {
+        console.log(body.articles);
         setListArticles(body.articles);
         setIsLoading(false);
       });
-  }, []);
+  }, [props.topic]);
   return isLoading ? (
     <p>Loading</p>
   ) : (
