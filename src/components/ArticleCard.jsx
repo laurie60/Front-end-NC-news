@@ -18,6 +18,7 @@ export default function ArticleCard(props) {
                 title={article.title}
                 author={article.author}
                 topic={article.topic}
+                id={article.article_id}
               />
 
               <div className={classes.postBody}>{article.body}</div>

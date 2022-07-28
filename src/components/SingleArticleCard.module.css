@@ -1,0 +1,50 @@
+.aroundGrid {
+  width: 90%;
+  min-height: 400px;
+  margin: 4%;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  font-family: "Raleway";
+}
+
+.gridContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 127, 80, 0.33);
+  display: grid;
+  grid-template-columns: 0.125fr 0.125fr 0.5fr 0.25fr;
+  grid-template-rows: 0.125fr 0.125fr 0.5fr 0.25fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". title title addedBy"
+    "topic body body body"
+    "votes votes . dateAdded";
+  justify-items: center;
+  align-items: stretch;
+}
+
+#coding {
+  background-color: rgba(112, 255, 80, 0.33);
+}
+
+#cooking {
+  background-color: rgba(220, 20, 60, 0.391);
+}
+
+#football {
+  background-color: rgba(20, 113, 220, 0.339);
+}
+
+.postBody {
+  background-color: rgba(245, 245, 245, 0.842);
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+  padding-right: 5px;
+  grid-area: body;
+  align-self: center;
+  justify-self: center;
+  min-height: 200px;
+}

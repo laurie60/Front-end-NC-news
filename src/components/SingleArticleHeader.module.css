@@ -8,14 +8,6 @@
   align-self: center;
 
   grid-area: title;
-  cursor: pointer;
-}
-
-.title:hover {
-  background-color: white;
-  border: 2px rgba(0, 0, 0, 0.48);
-  border-style: dotted;
-  border-radius: 3%;
 }
 
 .addByTxt {
@@ -63,6 +55,5 @@
 }
 
 #cooking {
-  animation: smoky 5s;
   color: #df0606;
 }
