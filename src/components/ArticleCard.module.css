@@ -18,9 +18,9 @@
   grid-template-rows: 0.05fr 0.125fr 0.125fr 0.45fr 0.25fr;
   gap: 0px 0px;
   grid-template-areas:
-    "votes . title title addedBy"
+    "votes dateAdded title title addedBy"
     "votes topic body body body"
-    "votes . . . dateAdded";
+    "votes commentTitle comment comment comment";
   justify-items: center;
   align-items: stretch;
 }

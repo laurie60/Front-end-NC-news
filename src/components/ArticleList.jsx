@@ -17,7 +17,6 @@ export default function ArticleList(props) {
         return res.json();
       })
       .then((body) => {
-        console.log(body.articles);
         setListArticles(body.articles);
         setIsLoading(false);
       });
