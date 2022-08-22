@@ -1,3 +1,9 @@
+.gridContainer {
+  display: grid;
+  grid-template-columns: 0.05fr 0.95fr 10px;
+  grid-template-rows: 50px 20px auto 20px auto 20px auto;
+}
+
 .allComments {
   width: 90%;
   margin: 4%;
@@ -5,6 +11,46 @@
   overflow: hidden;
   position: relative;
   font-family: "Raleway";
+  background-color: whitesmoke;
+}
+
+.commmentHeader {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border-style: solid;
+  display: flex;
+}
+
+.commentAuthor {
+  padding-left: 10px;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.796);
+  background-color: rgba(255, 251, 0, 0.534);
+  grid-area: addedBy;
+  align-self: center;
+  width: 45px;
+  line-height: 45px;
+  border-radius: 70%;
+  text-align: center;
+  justify-self: center;
+}
+
+.postBody {
+  background-color: rgba(0, 0, 0, 0.117);
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+
+.postBody {
+  background-color: rgba(0, 0, 0, 0.117);
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 6;
 }
 
 .voteCount {
@@ -20,12 +66,6 @@
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 7;
-}
-
-.gridContainer {
-  display: grid;
-  grid-template-columns: 0.05fr 0.95fr 10px;
-  grid-template-rows: auto 20px auto 20px auto 20px auto;
 }
 
 #coding {
