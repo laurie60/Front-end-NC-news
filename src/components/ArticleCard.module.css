@@ -14,13 +14,13 @@
   width: 100%;
   background-color: rgba(255, 127, 80, 0.33);
   display: grid;
-  grid-template-columns: 0.125fr 0.125fr 0.5fr 0.25fr;
-  grid-template-rows: 0.125fr 0.125fr 0.5fr 0.25fr;
+  grid-template-columns: 0.05fr 0.125fr 0.125fr 0.45fr 0.25fr;
+  grid-template-rows: 0.05fr 0.125fr 0.125fr 0.45fr 0.25fr;
   gap: 0px 0px;
   grid-template-areas:
-    ". title title addedBy"
-    "topic body body body"
-    "votes votes . dateAdded";
+    "votes dateAdded title title addedBy"
+    "votes topic body body body"
+    "votes commentTitle comment comment comment";
   justify-items: center;
   align-items: stretch;
 }

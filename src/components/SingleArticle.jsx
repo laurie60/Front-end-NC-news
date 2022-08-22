@@ -3,6 +3,7 @@ import SingleArticleCard from "./SingleArticleCard";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import classes from "./SingleArticle.module.css";
+import Comments from "./Comments";
 
 export default function SingleArticle() {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,6 +38,12 @@ export default function SingleArticle() {
         createdAt={article.created_at}
         votes={article.votes}
         commentCount={article.commentCount}
+        id={article.article_id}
+      />
+      <Comments
+        articleId={article.article_id}
+        singleArticleView={true}
+        topic={article.topic}
       />
     </section>
   );

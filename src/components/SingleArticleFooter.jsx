@@ -1,5 +1,7 @@
 import { Fragment } from "react";
 import classes from "./SingleArticleFooter.module.css";
+import Votes from "./Votes";
+import Comments from "./Comments";
 
 export default function SingleArticleFooter(props) {
   console.log(props.createdAt);
@@ -9,8 +11,9 @@ export default function SingleArticleFooter(props) {
   }
   return (
     <Fragment>
-      <p className={classes.voteCount}>Votes: {props.votes} </p>
+      <Votes votes={props.votes} id={props.id} />
       <p className={classes.date}>Date Posted: {strDate(props.createdAt)}</p>
+      {/* <Comments articleId={props.id} singleArticleView={true} /> */}
     </Fragment>
   );
 }
