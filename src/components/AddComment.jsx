@@ -29,19 +29,22 @@ export default function AddComment(props) {
   };
 
   return (
-    <section className={classes.container}>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Add a new item:
-          <input
-            value={commentBody}
-            onChange={(event) => setCommentBody(event.target.value)}
-          />
-        </label>
-        <button type="submit">Submit Comment</button>
-      </form>
+    <section>
+      <form className={classes.container} onSubmit={handleSubmit}>
+        <h4 className={classes.label}> Add a new comment:</h4>
 
-      <h4>Add a Comment:</h4>
+        <textarea
+          className={classes.textarea}
+          name="add comment"
+          rows="4"
+          cols="50"
+          value={commentBody}
+          onChange={(event) => setCommentBody(event.target.value)}
+        />
+        <button type="submit" className={classes.submitButton}>
+          Submit Comment
+        </button>
+      </form>
     </section>
   );
 }

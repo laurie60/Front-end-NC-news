@@ -1,0 +1,29 @@
+.container {
+  width: 90%;
+  margin: 4%;
+  border-radius: 10px;
+  font-family: "Raleway";
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.label {
+  align-self: start;
+  justify-self: flex-start;
+  padding: 5px;
+}
+
+.textarea {
+  resize: none;
+  border-radius: 5px;
+}
+
+.submitButton {
+  padding: 5px;
+  font-family: "Raleway";
+  height: max;
+  border-radius: 10px;
+}
