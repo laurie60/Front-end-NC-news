@@ -4,13 +4,16 @@ import { Fragment } from "react";
 
 export default function CommentsList(props) {
   console.log("in Comment List");
+  const sortCommentsByVotes = props.listComments.sort(
+    (a, b) => b.votes - a.votes
+  );
 
   return (
     <Fragment>
-      <AddComment />
+      <AddComment listComments={props.listComments} />
 
       <section className={classes.allComments} id={classes[props.topic]}>
-        {props.listComments.map((comment) => {
+        {sortCommentsByVotes.map((comment) => {
           return (
             <section className={classes.allComments}>
               <div className={classes.gridContainer} key={comment.comment_id}>
