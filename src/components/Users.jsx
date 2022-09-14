@@ -1,22 +1,22 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { getUsers } from "../api";
+import { UserContext } from "../contexts/Users";
 import useApi from "../useApi";
 import classes from "./Users.module.css";
 
 export default function Users(props) {
   const [loggedInUser, setLoggedInUser] = useState("");
+  const { user, setUser } = useContext(UserContext);
 
   const [isLoading, usersList] = useApi({
     apiCall: getUsers,
   });
 
   function handleClick(user) {
-    console.log(user);
+    setUser(user);
   }
 
-  console.log(loggedInUser, "loggedinUser");
-
-  console.log(usersList);
+  console.log(user, "user");
 
   return (
     <section className={classes.container}>
