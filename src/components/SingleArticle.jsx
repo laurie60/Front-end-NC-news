@@ -27,9 +27,6 @@ export default function SingleArticle() {
     <p>Loading</p>
   ) : (
     <section className={classes.wrapper}>
-      <div className={classes.container}>
-        <TopicsList />
-      </div>
       <SingleArticleCard
         body={article.body}
         title={article.title}

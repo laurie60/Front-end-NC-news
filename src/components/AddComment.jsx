@@ -16,8 +16,6 @@ export default function AddComment(props) {
       .then(({ body }) => console.log(body));
   };
 
-  useEffect(() => {}, [commentBody, props.id]);
-
   const handleSubmit = (event) => {
     console.log("hello there");
     console.log(article_id, "params");
