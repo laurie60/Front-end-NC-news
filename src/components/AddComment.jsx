@@ -4,30 +4,34 @@ import classes from "./AddComment.module.css";
 import { Link, useParams } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../contexts/Users";
+import { addComment } from "../api";
 
 export default function AddComment(props) {
+  const [error, setError] = useState("");
   const { user } = useContext(UserContext);
   const [commentBody, setCommentBody] = useState("");
-  const username = "grumpy19";
+
   const { article_id } = useParams();
 
   const URL = "https://laurences-news.herokuapp.com/api";
 
+  user && console.log(user.username);
+
   const addComment = (id, toSend) => {
     return axios
       .post(`${URL}/articles/${id}/comments`, toSend)
-      .then(({ body }) => console.log(body));
+      .then(({ body }) => setError("Success!"))
+      .catch(({ response }) => setError(response.data.msg));
   };
 
   const handleSubmit = (event) => {
-    console.log("hello there");
-    console.log(article_id, "params");
     event.preventDefault();
-    const toSend = { username: username, body: commentBody };
-    console.log(toSend);
+    const toSend = { username: user.username, body: commentBody };
     addComment(article_id, toSend);
     setCommentBody("");
   };
+
+  console.log(error);
 
   return (
     <section>
@@ -46,6 +50,7 @@ export default function AddComment(props) {
           <button type="submit" className={classes.submitButton}>
             Submit Comment
           </button>
+          {error && <p>{error}</p>}
         </form>
       ) : (
         <p>
