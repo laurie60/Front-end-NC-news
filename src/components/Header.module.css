@@ -3,6 +3,22 @@ img {
   height: auto;
 }
 
+.avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+.headerRight {
+  display: flex;
+  /* border: 2px;
+  border-color: brown;
+  border-style: double; */
+  width: 120%;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .mainHeader {
   background-color: rgba(246, 244, 16, 255);
   overflow: hidden;

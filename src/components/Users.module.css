@@ -1,0 +1,44 @@
+.container {
+  /* border-radius: 5px;
+  border-style: dotted;
+  border-width: 2px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-family: raleway;
+  flex-wrap: wrap;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.username {
+  justify-self: start;
+}
+
+.userCard {
+  height: 100%;
+  /* border-radius: 5px;
+  border-style: dotted;
+  border-width: 2px; */
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  justify-content: center;
+  width: calc(100% * (0.26));
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.userCard:hover {
+  background-color: yellow;
+  cursor: pointer;
+  border-radius: 5px;
+  border-style: dotted;
+  border-width: 5px;
+}

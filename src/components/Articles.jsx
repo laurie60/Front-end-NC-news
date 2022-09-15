@@ -11,9 +11,6 @@ export default function Articles() {
 
   return (
     <section className={classes.wrapper}>
-      <div className={classes.container}>
-        <TopicsList />
-      </div>
       <div className={classes.contAtrLst}>
         <ArticleList topic={topic} />
       </div>

@@ -5,6 +5,9 @@ export default function ShowTopics() {
   const navigate = useNavigate();
   return (
     <div className={classes.wrapper}>
+      <div onClick={() => navigate("/")} className={classes.selectTopic}>
+        All
+      </div>
       <div onClick={() => navigate("/coding")} className={classes.selectTopic}>
         Coding
       </div>

@@ -66,39 +66,37 @@ export default function Votes(props) {
     <Fragment>
       <div className={classes.voteCount}>
         {" "}
-        <div className={classes.wrapper}>
-          {voteState !== "up" ? (
-            <i className={classes.voteArrows} onClick={upClick}>
-              {" "}
-              <FaLongArrowAltUp />
-            </i>
-          ) : (
-            <i
-              className={classes.voteArrows}
-              id={classes.upArrow}
-              onClick={cancelUpClick}
-            >
-              {" "}
-              <FaLongArrowAltUp />
-            </i>
-          )}
-          <p className={classes.voteTxt}>{currVotes}</p>
-          {voteState !== "down" ? (
-            <i className={classes.voteArrows} onClick={downClick}>
-              {" "}
-              <FaLongArrowAltDown />
-            </i>
-          ) : (
-            <i
-              className={classes.voteArrows}
-              id={classes.downArrow}
-              onClick={cancelDownClick}
-            >
-              {" "}
-              <FaLongArrowAltDown />
-            </i>
-          )}
-        </div>
+        {voteState !== "up" ? (
+          <i className={classes.voteArrows} onClick={upClick}>
+            {" "}
+            <FaLongArrowAltUp />
+          </i>
+        ) : (
+          <i
+            className={classes.voteArrows}
+            id={classes.upArrow}
+            onClick={cancelUpClick}
+          >
+            {" "}
+            <FaLongArrowAltUp />
+          </i>
+        )}
+        <p className={classes.voteTxt}>{currVotes}</p>
+        {voteState !== "down" ? (
+          <i className={classes.voteArrows} onClick={downClick}>
+            {" "}
+            <FaLongArrowAltDown />
+          </i>
+        ) : (
+          <i
+            className={classes.voteArrows}
+            id={classes.downArrow}
+            onClick={cancelDownClick}
+          >
+            {" "}
+            <FaLongArrowAltDown />
+          </i>
+        )}
       </div>
     </Fragment>
   );

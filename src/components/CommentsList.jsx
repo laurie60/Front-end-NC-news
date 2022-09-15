@@ -22,7 +22,7 @@ export default function CommentsList(props) {
                   <></>
                 </div>
                 <div className={classes.voteCount}>{comment.votes}</div>
-                <div className={classes.postBody}>{comment.body}</div>
+                <p className={classes.postBody}>{comment.body}</p>
               </div>
             </section>
           );

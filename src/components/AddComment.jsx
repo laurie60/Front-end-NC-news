@@ -1,9 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import classes from "./AddComment.module.css";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../contexts/Users";
 
 export default function AddComment(props) {
+  const { user } = useContext(UserContext);
   const [commentBody, setCommentBody] = useState("");
   const username = "grumpy19";
   const { article_id } = useParams();
@@ -15,8 +18,6 @@ export default function AddComment(props) {
       .post(`${URL}/articles/${id}/comments`, toSend)
       .then(({ body }) => console.log(body));
   };
-
-  useEffect(() => {}, [commentBody, props.id]);
 
   const handleSubmit = (event) => {
     console.log("hello there");
@@ -30,21 +31,27 @@ export default function AddComment(props) {
 
   return (
     <section>
-      <form className={classes.container} onSubmit={handleSubmit}>
-        <h4 className={classes.label}> Add a new comment:</h4>
+      {user ? (
+        <form className={classes.container} onSubmit={handleSubmit}>
+          <h4 className={classes.label}> Add a new comment:</h4>
 
-        <textarea
-          className={classes.textarea}
-          name="add comment"
-          rows="4"
-          cols="50"
-          value={commentBody}
-          onChange={(event) => setCommentBody(event.target.value)}
-        />
-        <button type="submit" className={classes.submitButton}>
-          Submit Comment
-        </button>
-      </form>
+          <textarea
+            className={classes.textarea}
+            name="add comment"
+            rows="4"
+            cols="50"
+            value={commentBody}
+            onChange={(event) => setCommentBody(event.target.value)}
+          />
+          <button type="submit" className={classes.submitButton}>
+            Submit Comment
+          </button>
+        </form>
+      ) : (
+        <p>
+          Please <Link to="/users">log in</Link> to post a comment
+        </p>
+      )}
     </section>
   );
 }
