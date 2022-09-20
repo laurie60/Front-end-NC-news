@@ -6,7 +6,6 @@ const squishedimage = require("../Logo-Squished.jpg");
 
 export default function Header() {
   const { user } = useContext(UserContext);
-  console.log(user, "<<<<in header");
   return (
     <header className={classes.mainHeader}>
       <div className={classes.container}>

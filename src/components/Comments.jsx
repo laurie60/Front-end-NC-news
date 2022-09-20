@@ -1,5 +1,4 @@
 import { useEffect, useState, Fragment } from "react";
-import { useParams } from "react-router-dom";
 import classes from "./Comments.module.css";
 import CommentsList from "./CommentsList";
 

@@ -1,10 +1,9 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import classes from "./AddComment.module.css";
 import { Link, useParams } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../contexts/Users";
-import { addComment } from "../api";
 
 export default function AddComment(props) {
   const [error, setError] = useState("");
@@ -14,9 +13,6 @@ export default function AddComment(props) {
   const { article_id } = useParams();
 
   const URL = "https://laurences-news.herokuapp.com/api";
-
-  user && console.log(user.username);
-
   const addComment = (id, toSend) => {
     return axios
       .post(`${URL}/articles/${id}/comments`, toSend)

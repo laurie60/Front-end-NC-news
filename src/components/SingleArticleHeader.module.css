@@ -1,9 +1,6 @@
 .title {
   font-size: 1.3rem;
   padding: 3px;
-  /* border: 2px rgb(183, 102, 102); */
-  /* border-style: dotted;
-  border-radius: 1%; */
   background-color: #ffffff88;
   grid-column-start: 5;
   grid-column-end: 9;

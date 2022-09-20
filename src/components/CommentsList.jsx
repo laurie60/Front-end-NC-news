@@ -3,7 +3,6 @@ import AddComment from "./AddComment";
 import { Fragment } from "react";
 
 export default function CommentsList(props) {
-  console.log("in Comment List");
   const sortCommentsByVotes = props.listComments.sort(
     (a, b) => b.votes - a.votes
   );
