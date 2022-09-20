@@ -15,7 +15,7 @@ export default function Users(props) {
     setUser(user);
   }
 
-  console.log(user, "user");
+  console.log(isLoading, user);
 
   return (
     <section className={classes.container}>
