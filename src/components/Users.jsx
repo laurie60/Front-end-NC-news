@@ -1,11 +1,10 @@
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import { getUsers } from "../api";
 import { UserContext } from "../contexts/Users";
 import useApi from "../useApi";
 import classes from "./Users.module.css";
 
 export default function Users(props) {
-  const [loggedInUser, setLoggedInUser] = useState("");
   const { user, setUser } = useContext(UserContext);
 
   const [isLoading, usersList] = useApi({

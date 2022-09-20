@@ -1,4 +1,3 @@
-import TopicsList from "./TopicsList";
 import SingleArticleCard from "./SingleArticleCard";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
