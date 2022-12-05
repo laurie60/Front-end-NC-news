@@ -45,7 +45,7 @@ export default function Votes(props) {
   }
 
   useEffect(() => {
-    fetch(`https://laurences-news.herokuapp.com/api/articles/${props.id}`, {
+    fetch(`https://be-news.cyclic.app/${props.id}`, {
       method: "PATCH",
       body: JSON.stringify({
         inc_votes: changeVoteBy,

@@ -3,8 +3,6 @@ import SingleArticleHeader from "./SingleArticleHeader";
 import SingleArticleFooter from "./SingleArticleFooter";
 
 export default function SingleArticleCard(props) {
-  console.log(props.title);
-
   return (
     <div className={classes.aroundGrid}>
       <div className={classes.gridContainer} id={classes[props.topic]}>
