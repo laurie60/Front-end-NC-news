@@ -19,6 +19,7 @@ export default function Users(props) {
 
   return (
     <section className={classes.container}>
+      {isLoading && <p>Loading</p>}
       {usersList &&
         usersList.map((user) => {
           return (

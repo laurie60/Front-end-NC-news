@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import classes from "./ArticleFooter.module.css";
-import Comments from "./Comments";
+// import Comments from "./Comments";
 import Votes from "./Votes";
 
 export default function ArticleFooter(props) {
@@ -13,7 +13,7 @@ export default function ArticleFooter(props) {
       <Votes votes={props.votes} id={props.id} />
 
       <p className={classes.date}>Date Posted: {strDate(props.datePosted)}</p>
-      <Comments articleId={props.id} singleArticleView={false} />
+      {/* <Comments articleId={props.id} singleArticleView={false} /> */}
     </Fragment>
   );
 }
