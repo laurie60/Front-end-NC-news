@@ -1,7 +1,7 @@
 # NC-news's Front-end
 
 The NC-news website is live and hosted on Netlify:
-[lmm-portfolio.netlify.app](https://lmm-portfolio.netlify.app)
+[nc-news-topics-of-life.netlify.app](https://nc-news-topics-of-life.netlify.app)
 
 This repo contains a front-end for the NC-news website, a reddit-like site where users can view articles about a range of topics.
 
