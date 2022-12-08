@@ -1,8 +1,6 @@
 import axios from "axios";
 import axiosRetry from "axios-retry";
 
-axiosRetry(axios, { retries: 5 });
-
 const URL = "https://be-news.cyclic.app/api";
 
 export const getUsers = () => {

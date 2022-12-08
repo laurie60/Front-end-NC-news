@@ -4,8 +4,6 @@ import ArticleCard from "./ArticleCard";
 import classes from "./ArticleCard.module.css";
 
 export default function ArticleList(props) {
-  // AltApi(`articles`, setListArticles, setIsLoading, "articles");
-
   const [isLoading, listArticles] = useApi({
     apiCall: getArticles,
     argument: props.topic,
